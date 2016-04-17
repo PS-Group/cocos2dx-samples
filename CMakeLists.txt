@@ -62,11 +62,11 @@ include_directories(
   ${SDK_ROOT}/include/cocos2d/cocos
   ${SDK_ROOT}/include/cocos2d/cocos/platform
   ${SDK_ROOT}/include/cocos2d/cocos/audio/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/includes
 )
 link_directories(
   ${SDK_ROOT}/lib32
 )
-
 
 aux_source_directory(Classes CLASSES_SRC)
 file (GLOB CLASSES_HEADERS "Classes/*.h")
@@ -77,6 +77,7 @@ set(GAME_SRC
 set(GAME_HEADERS
   ${CLASSES_SRC}
   ${PLATFORM_SPECIFIC_HEADERS}
+  ${CMAKE_CURRENT_SOURCE_DIR}/includes/cocos_custom.h
 )
 add_executable(${APP_NAME} ${GAME_SRC} ${GAME_HEADERS})
 target_link_libraries(${APP_NAME}
