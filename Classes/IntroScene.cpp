@@ -1,10 +1,11 @@
 #include "IntroScene.h"
+#include "GameLevelScene.h"
 #include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
-bool IntroScene::init()
+bool CIntroScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -24,13 +25,18 @@ bool IntroScene::init()
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(IntroScene::menuCloseCallback, this));
-    
+                                           CC_CALLBACK_1(CIntroScene::OnMenuClose, this));
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
+    auto playLabel = Label::createWithTTF("Play Now!", "fonts/Marker Felt.ttf", 24);
+    auto playItem = MenuItemLabel::create(playLabel, CC_CALLBACK_1(CIntroScene::OnMenuPlay, this));
+
+    playItem->setPosition(Vec2(origin.x + 0.5f * visibleSize.width - closeItem->getContentSize().width/2 ,
+                               origin.y + 0.8f * visibleSize.height));
+
     // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
+    auto menu = Menu::create(closeItem, playItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
 
@@ -62,11 +68,17 @@ bool IntroScene::init()
 }
 
 
-void IntroScene::menuCloseCallback(Ref* pSender)
+void CIntroScene::OnMenuClose(Ref* pSender)
 {
     Director::getInstance()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+}
+
+void CIntroScene::OnMenuPlay(Ref *pSender)
+{
+    (void)pSender;
+    Director::getInstance()->pushScene(make_scene<CGameLevelScene>());
 }

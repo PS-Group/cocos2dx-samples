@@ -12,6 +12,6 @@ int main(int argc, char **argv)
     (void)argc;
     (void)argv;
     // create the application instance
-    AppDelegate app;
+    CAppDelegate app;
     return Application::getInstance()->run();
 }
