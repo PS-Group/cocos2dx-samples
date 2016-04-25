@@ -4,13 +4,16 @@ USING_NS_CC;
 
 namespace
 {
-const Vec2 HERO_SPEED(100, 100);
+const Vec2 HERO_SPEED(150, 150);
 }
 
 void CHeroPuppeteer::SetPuppet(CHeroPuppet *hero)
 {
     m_hero = hero;
-    m_hero->SetPuppeteer(this);
+    if (m_hero)
+    {
+        m_hero->SetPuppeteer(this);
+    }
 }
 
 void CHeroPuppeteer::OnEnter()

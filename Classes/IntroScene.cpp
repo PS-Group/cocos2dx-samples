@@ -32,7 +32,7 @@ bool CIntroScene::init()
     auto playLabel = Label::createWithTTF("Play Now!", "fonts/Marker Felt.ttf", 24);
     auto playItem = MenuItemLabel::create(playLabel, CC_CALLBACK_1(CIntroScene::OnMenuPlay, this));
 
-    playItem->setPosition(Vec2(origin.x + 0.5f * visibleSize.width - closeItem->getContentSize().width/2 ,
+    playItem->setPosition(Vec2(origin.x + 0.5f * visibleSize.width ,
                                origin.y + 0.8f * visibleSize.height));
 
     // create menu, it's an autorelease object

@@ -14,6 +14,7 @@ public:
     void onExit() override;
     void update(float delta) override;
 
+    cocos2d::Vec2 GetCenterInWorld()const;
     void SetPuppeteer(IPuppeteer *puppeteer);
 
 private:
