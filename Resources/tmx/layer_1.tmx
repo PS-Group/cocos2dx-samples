@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="76">
+ <tileset firstgid="1" name="ground" tilewidth="32" tileheight="32" tilecount="48" columns="12">
+  <image source="ground_tiles.png" width="384" height="128"/>
+ </tileset>
+ <layer name="tiles" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxtlteqI0EMRAUT2t0vEz2wOcCGu+n/P2/VUAfJ5j4UE6w0Uqnag5ndHavjdByOwTHq2p8XxyxcjneO944vjq+vXEfZ9ZjVURw3vWu6nxS3Kv8pv/5uc/xw/HT8dfx75UqsQ3km5Tn026a4g66X8u767VKuSf6D3lH7LvtRcXfZHykHv98S7inPqvuW4tJT6r2n+L2uD46PsltSrqb+16c+39OsrvTc0hypaVOfXxy/0hxLmsdNddPnLfmRZ9DzpNiz7kfZznp/pDm+cbxV/R2fHJ8Vh/kX+S+6J1dJM6m6kpMed59vju/pu347/shnUk92AR4eulJzSf3YUr1FPkW18l1Lqr+mmFuKkWfEfPkO5gpP2I052cLXXflXC07DwyH1lPmWZAPX6e+hmrCF+5PFzm/pntj0lLyzBW9O1bboWy7Fw/eecrObNfUgx4ZPo2KyM/AEfrCn+LKv1WIP4Ev/HrhBbHSJWph5sUdOsNun4p0WO7BbaFe3hRvUyDybfJresbPwoFlwqFjsE7w/Uk1wg36gJ1U2p+K3NBP6gW/WRbQf/nUfuAEvqsVOolf0gR2kJ/jSMzSoWexGj4uWZT1nzkMC3EEzW/LlXKLHnAObcqJlp8WuVQsuYkdsdmNOvmgp+nY+YbHYg2JxtjFfZoHG7crT37EfnBnMOde1Wpxzo2zoO9zrz+gsPGfW7Mdqjxo3pL6tFjrA/qwpNtxDZ+E5s66y3y3OYJ7XNCe4dFnoIPOmL5PFmcROw7Gs53DpsuAZM0WHMq/zLsMtdosYzYJjy1Pu/F8Ijdjtkeez4u3p983iDEFn4B/fjV5zdtOTyx7/C7BH6MZ/mzsnIQ==
+  </data>
+ </layer>
+ <objectgroup name="obstacles">
+  <object id="55" x="63.8702" y="162.265" width="63.0071" height="60.4177"/>
+  <object id="56" x="129.467" y="194.2" width="61.2809" height="57.8284"/>
+  <object id="57" x="190.747" y="224.409" width="64.7333" height="191.611"/>
+  <object id="58" x="252.028" y="195.063" width="66.4595" height="59.5546"/>
+  <object id="59" x="290.005" y="128.603" width="62.144" height="62.144"/>
+  <object id="61" x="416.019" y="-1.72622" width="254.618" height="63.0071"/>
+  <object id="62" x="639.565" y="255.481" width="63.8702" height="61.2809"/>
+  <object id="63" x="576.558" y="289.142" width="63.8702" height="61.2809"/>
+  <object id="64" x="513.551" y="319.351" width="63.0071" height="257.207"/>
+  <object id="65" x="193.337" y="481.616" width="60.4177" height="188.158"/>
+  <object id="66" x="1.72622" y="641.291" width="194.2" height="60.4177"/>
+  <object id="67" x="0.863111" y="131.193" width="61.2809" height="56.9653"/>
+ </objectgroup>
+ <objectgroup name="units">
+  <object id="69" type="npc" x="264.416" y="21.24" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+  <object id="71" type="npc" x="624.622" y="82.7587" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+  <object id="72" type="npc" x="749.622" y="234.759" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+  <object id="73" type="npc" x="717.622" y="453.759" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+  <object id="74" type="npc" x="757.622" y="642.759" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+  <object id="75" type="hero" x="72.6218" y="592.759" width="26.7564" height="28.4827">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>
