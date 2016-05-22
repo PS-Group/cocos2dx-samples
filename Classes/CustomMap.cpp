@@ -55,8 +55,12 @@ public:
 private:
     bool HasGroupBoolProperty(uint32_t groupId)
     {
-        ValueMap groupProps = m_map.getPropertiesForGID(int(groupId)).asValueMap();
-        return groupProps[m_name].asBool();
+        Value groupPropsOpt = m_map.getPropertiesForGID(int(groupId));
+        if (groupPropsOpt.isNull())
+        {
+            return false;
+        }
+        return groupPropsOpt.asValueMap()[m_name].asBool();
     }
 
     TMXTiledMap & m_map;
